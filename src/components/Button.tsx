@@ -19,9 +19,8 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 4px;
   padding: 6px 15px;
   
-  ${fontProps(typography.body.body)};
-
   ${({ primary }) => css`
+    ${fontProps(primary ? typography.body.bodyCenter : typography.body.body)};
     background-color: ${primary ? layerStyles.wfGrey1.fillColor : layerStyles.borderWfGrey1.fillColor};
   `}
 `;
