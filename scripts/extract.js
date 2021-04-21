@@ -19,7 +19,7 @@ fs.createReadStream(argv[2])
                     __dirname + '/designTokens.ts.njk',
                     {
                         colors: R.pipe(
-                            R.filter(R.pipe(R.prop('name'), R.startsWith('UI/'))),
+                            R.filter(R.pipe(R.prop('name'), R.startsWith('Wireframe/'))),
                             R.indexBy(R.pipe(R.prop('name'), R.split('/'), R.last, camelcase)),
                             R.map(R.pipe(R.prop('value'), sketchColorToRgba)),
                         )(doc.sharedSwatches.objects),
@@ -39,7 +39,7 @@ fs.createReadStream(argv[2])
                         )(doc.layerTextStyles.objects),
 
                         layerStyles: R.pipe(
-                          R.filter(R.pipe(R.prop('name'), R.startsWith('UI/'))),
+                          R.filter(R.pipe(R.prop('name'), R.startsWith('Wireframe/'))),
                           R.indexBy(R.pipe(R.prop('name'), R.split('/'), R.last, camelcase)),
                           R.map(R.applySpec({
                             fillColor: R.pipe(R.path(["value", "fills", 0, "color"]), sketchColorToRgba),
