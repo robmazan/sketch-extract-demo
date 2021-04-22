@@ -156,7 +156,7 @@ export const layerStyles = {
     "fillColor": "rgba(239, 239, 245, 1)"
   },
   "wfGrey1": {
-    "fillColor": "rgba(189, 189, 207, 1)"
+    "fillColor": "rgba(59, 59, 126, 1)"
   },
   "borderWfGrey1": {
     "fillColor": "rgba(255, 255, 255, 1)",
